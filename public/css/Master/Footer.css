@@ -1,0 +1,276 @@
+
+.fi-pre-footer {
+    background: #0f4583 url("/Images/Master Page/fwc_darkbluebg.png") repeat
+}
+
+.fi-pre-footer {
+    background-color: #0f4583;
+    margin-bottom: 0;
+    padding: 40px
+}
+
+.fi-pre-footer section {
+    margin-bottom: 0
+}
+
+.fi-pre-footer .nav li a {
+    color: #fff;
+    fill: #fff;
+    border-color: #fff;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s
+}
+
+.fi-pre-footer .nav li a:hover,
+.fi-pre-footer .nav li a:focus {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.fi-pre-footer .fi-footer-link__social .fi-social-channels__title {
+    display: none
+}
+
+.fi-pre-footer .fi-footer-link__social .fi-social-channels--svg {
+    margin-bottom: 0
+}
+
+.fi-pre-footer .fi-footer-link__social .fi-social-channels--svg li a {
+    color: #fff;
+    fill: #fff;
+    border-color: #fff;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: bold
+}
+
+.fi-pre-footer .fi-footer-link__social .fi-social-channels--svg li a:hover {
+    background-color: #fff;
+    fill: #0f4583
+}
+
+.fi-pre-footer .fi-footer-link__social .fi-social-channels--svg li+li {
+    margin-left: 15px
+}
+
+.fi-pre-footer .fi-footer-link__social .fi-social-channels--svg li .fi-social-channels__linkedin {
+    display: none
+}
+
+.fi-pre-footer .fi-footer-link__menu {
+    display: block;
+    padding: 40px 0
+}
+
+.fi-pre-footer .fi-footer-link__menu li {
+    width: 50%;
+    float: left
+}
+
+.fi-pre-footer .fi-search {
+    color: #fff
+}
+.fi-search .form-group {
+    position: relative;
+}
+
+.fi-pre-footer .fi-search input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 1
+}
+
+.fi-pre-footer .fi-search input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.fi-pre-footer .fi-search input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.fi-pre-footer .fi-search .fi-search__text {
+    color: #fff;
+    border-bottom-color: rgba(255, 255, 255, 0.7)
+}
+
+.fi-pre-footer .fi-search .icon-search {
+    fill: #fff
+}
+.fi-footer-link .fi-search .fi-search__text {
+    width: 100%;
+}
+.fi-pre-footer .fi-search .fi-search__text {
+    color: #fff;
+    border-bottom-color: rgba(255,255,255,0.7);
+}
+.fi-footer-link .fi-search {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0;
+}
+search {
+    color: #fff;
+}
+.fi-footer-link>* {
+    flex: 1 100%;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.fi-footer-link .fi-search .fi-search__submit-wrap {
+    top: 10px;
+}
+.fi-search__submit-wrap {
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+.fi-search .fi-search__text {
+    box-shadow: none;
+    border-bottom-color: rgba(50,98,149,0.5);
+    border-width: 0 0 1px 0;
+    font-size: 13px;
+    color: #326295;
+    width: 200px;
+    padding: 5px 0;
+    background-color: transparent;
+}
+.fi-search .fi-search__text:hover, .fi-search .fi-search__text:focus, .fi-search .fi-search__text:active {
+    outline: none;
+}
+@media (min-width: 1024px) {
+    .fi-pre-footer .fi-footer-link__menu {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap
+    }
+    .fi-pre-footer .fi-footer-link__menu li {
+        width: 20%
+    }
+    .fi-footer-link .fi-search .fi-search__text {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    html[lang="ru-RU"] .fi-pre-footer .fi-footer-link__social .fi-social-channels--svg li+li,
+    html[lang="en-GB"] .fi-pre-footer .fi-footer-link__social .fi-social-channels--svg li+li {
+        margin-left: 10px
+    }
+}
+
+@media (min-width: 1200px) {
+    .fi-pre-footer {
+        overflow: hidden
+    }
+    .fi-pre-footer .fi-footer-link__menu {
+        padding-left: 140px;
+        padding-right: 140px
+    }
+    .fi-pre-footer .container-fluid {
+        overflow: visible;
+        position: relative
+    }
+    .fi-pre-footer .container-fluid:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        background-image: url("/Images/Master Page/footer_left.png");
+        height: 184px;
+        width: 379px;
+        left: -180px
+    }
+    .fi-pre-footer .container-fluid:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        background-image: url("/Images/Master Page/footer_right.png");
+        height: 211px;
+        width: 372px;
+        right: -180px
+    }
+}
+
+.fi-site-footer {
+    background-color: #fff
+}
+
+.fi-site-footer .fi-select__languages .dropdown-menu,
+.fi-site-footer .fi-select__languages .fi-select {
+    background-color: #fff
+}
+
+.fi-site-footer .fi-select__languages .dropdown-menu+.fi-icon-down,
+.fi-site-footer .fi-select__languages .fi-select+.fi-icon-down {
+    color: #326295
+}
+
+.fi-site-footer .fi-select__languages .btn-select {
+    color: #326295;
+    outline: none;
+    border: 1px solid #326295
+}
+
+.fi-site-footer .fi-select-wrapper a {
+    color: #326295
+}
+
+.fi-site-footer .fi-select-wrapper .dropdown-menu li.active>a,
+.fi-site-footer .fi-select-wrapper .dropdown-menu li>a:hover,
+.fi-site-footer .fi-select-wrapper .dropdown-menu li>a:focus {
+    background-color: #326295;
+    color: #fff
+}
+
+.fi-site-footer .fi-select-wrapper .dropdown-menu li>a {
+    background-color: #fff;
+    color: #326295
+}
+
+.fi-site-footer .fi-site-footer__copyright {
+    color: #326295
+}
+
+.fi-site-footer .fi-site-footer__copyright .fifa-icon {
+    background-size: cover;
+    width: 98px;
+    height: 30px;
+    background-image: url("")
+}
+
+.fi-site-footer .fi-footer-menu li>a {
+    color: #326295
+}
+
+.fi-site-footer .fi-site-footer__row2 {
+    color: #326295
+}
+
+.fi-site-footer select.fi-select {
+    border: 1px solid #326295;
+    color: #326295
+}

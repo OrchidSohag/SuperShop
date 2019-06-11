@@ -1,0 +1,65 @@
+#point td {
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+}
+
+#point th {
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+}
+#point thead {
+    background-color:lightgray;
+}
+
+.nav {
+    padding-left: 20%;
+}
+
+#point img {
+    width: 25%;
+    height: auto;
+}
+
+#point th,#point td {
+    font-size: 18px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    #point img {
+    width: 15%;
+    height: auto;
+}
+}
+
+@media only screen and (max-width: 1024px){
+    #point h2 {
+        font-size: 22px;
+    }
+    #point th {
+    font-size: 14px;
+}
+    #point td {
+        font-size: 16px;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    #point th,#point td {
+    font-size: 12px;
+}
+}
+
+@media only screen and (max-width: 450px) {
+    #point th,#point td {
+    font-size: 10px;
+}
+}
+
+@media only screen and (max-width: 350px) {
+    #point th,#point td {
+    font-size: 8px;
+}
+}

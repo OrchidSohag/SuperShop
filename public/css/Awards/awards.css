@@ -1,0 +1,22 @@
+.head {
+    padding-bottom: 5%;
+}
+
+.row h2 {
+    font-size: 1.5em;
+    padding-bottom: 15%;
+    text-align: center;
+}
+
+.row h3 {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.row a {
+    text-decoration: none;
+}
+
+.awards {
+    padding-bottom: 5%;
+}

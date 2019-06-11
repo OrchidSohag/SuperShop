@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+@media only screen and (max-width: 991px) {
+    .our-team-section.team-inner-page,
+    {
+        padding-bottom: 50px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .container {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .col-xs-6
+    {
+        width: 100%;
+        float: none;
+    }
+
+}
