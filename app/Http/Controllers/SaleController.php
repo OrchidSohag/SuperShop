@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 use App\Models\Customer;
 use App\Models\Product;
+use App\Models\Purchase;
 use App\Models\Sale;
+use App\Notifications\QuantityAlarming;
 use Illuminate\Http\Request;
 use Redirect;
 
@@ -41,8 +43,12 @@ class SaleController extends Controller
     {
        $quantity = Product::where('product_id','=',$request->productID)->pluck('stock_quantity');
 //       $quantity = trim((integer)$quantity);
-       foreach ($quantity as $a)
+        $aquantity = Product::where('product_id','=',$request->productID)->pluck('alarm_quantity');
+
+        foreach ($quantity as $a)
        {$q = $a;}
+        foreach ($aquantity as $a)
+        {$aq = $a;}
        $this->validate($request, [
             'customerID' => 'required',
             'productID' => 'required',
@@ -59,6 +65,18 @@ class SaleController extends Controller
             'paid_amount' => $request->paid,
             'due_amount' => $request->due,
         ]);
+        $cquantity = $q - $request->quantity;
+        Product::where('product_id',$request->productID)
+            ->update(['stock_quantity'=>$cquantity]);
+        if($cquantity <= $aq)
+        {
+            $purchase = Purchase::where('id', $request->productID)->get();
+            foreach ($purchase as $p)
+            {
+                auth()->user()->notify(new QuantityAlarming($p));
+            }
+        }
+
         return redirect()->route('AdminDashboard')->with('success_message', 'You are successfully register');
 
     }
@@ -108,6 +126,7 @@ class SaleController extends Controller
             'total_amount'=>"$request->amount",
             'paid_amount'=>"$request->paid",
             'due_amount'=>"$request->due"]);
+
         return Redirect::route('SalesCRUD');
     }
 

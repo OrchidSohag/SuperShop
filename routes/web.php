@@ -12,20 +12,27 @@
 */
 Route::get('/', function () {
     return view('SuperShopHomePage');
-});
+})->name('InventoryEntrance');
+
 Route::get('/admin-register', function (){
-    return view('Admin.register');})->name('AdminRegister');
-
-
+    return view('Admin.register');
+})->name('AdminRegister');
 Route::post('adminRegister', 'AdminController@store')->name('AdminEnrolled');
+
 Route::get('/admin-Login', function () {
     return view('Admin.login');
 })->name('AdminLogin');
 Route::post('adminLogin', 'AdminController@login')->name('AdminLoggedIn');
 
+Auth::routes();
+//Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+//Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('PasswordEmail');
+//Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+//Route::post('password/email','Auth\ForgotPasswordController@sendResetLinkEmail')->name('ResetPasswordSend');
 
+
+Route::group(['middleware' => 'Revalidate'],function() {
 Route::group(['middleware' => 'Authenticate'], function () {
-
     Route::get('admin-dashboard', function () {
         return view('Dashboard.main');
     })->name('AdminDashboard');
@@ -69,36 +76,5 @@ Route::group(['middleware' => 'Authenticate'], function () {
     Route::post('update-sale', 'SaleController@updateForm')->name('UpdateSaleForm');
     Route::post('update-sale/{id}', 'SaleController@update')->name('SalesUpdate');
     Route::post('delete-sale', 'SaleController@delete')->name('DeleteSale');
-
-
 });
-//Route::get('/fhome', function () {
-//    return view('WorldCupRussia');
-//})->name('fhome');
-//
-//Route::get('stadium', 'StadiumController@index')->name('stadium');
-//
-//Route::get('groups', 'GroupsController@index')->name('groups');
-//
-//Route::get('/matches', 'MatchesController@index')->name('matches');
-//
-//Route::get('/players/{country}', 'PlayersController@index');
-//
-//Route::get('country', 'CountryController@index')->name('teams');
-//
-//Auth::routes();
-//
-////Route::get('/userlogin', 'Auth\LoginController@showLoginForm')->name('userlogin');
-//
-//
-//Route::get('/home', 'HomeController@index')->name('home');
-//
-//Route::get('/pdetails/{name}', 'PlayersController@Details')->name('pdetails');
-//
-//Route::get('/sdetails/{stadium}', 'StadiumController@Details')->name('sdetails');
-//
-//Route::get('/awards', 'AwardsController@index')->name('awards');
-//
-//Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
-//
-//Route::post('/comment', 'CommentController@index')->name('comment');
+});

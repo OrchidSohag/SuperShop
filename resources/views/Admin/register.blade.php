@@ -96,8 +96,8 @@
             </div>
         </div>
         <div class="form-actions">
-            <span class="pull-left"><a href="#" class="flip-link btn btn-info">Back to Dashboard </a></span>
-            <span class="pull-right"><button type="submit" name="btnSave" class="btn btn-success"> New Registeration</button></span>
+            <span class="pull-left"><a href="{{route('InventoryEntrance')}}" class="flip-link btn btn-info">Back </a></span>
+            <span class="pull-right"><button type="submit" name="btnSave" class="btn btn-success"> Register</button></span>
         </div>
     </form>
 </div>
